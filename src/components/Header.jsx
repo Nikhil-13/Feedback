@@ -1,7 +1,7 @@
 function Header() {
 	return (
 		<>
-			<div className='conatiner' style={{ textAlign: 'center' }}>
+			<div className='conatiner' id='header'>
 				<h1>Feedback</h1>
 			</div>
 		</>

@@ -3,21 +3,20 @@ import { useState } from 'react'
 import Header from './components/Header'
 import FeedbackItem from './components/FeedbackItem'
 import FeedbackData from './data/FeedbackData'
+import FeedbackList from './components/FeedbackList'
 
 function App() {
-	const [feedback, setFeedback] = useState()
+	const [feedback, setFeedback] = useState(FeedbackData)
 	return (
 		<>
 			<Header></Header>
 			<div className='container'>
-				<div className='row'>
-					<div className='col-4'>
-						<FeedbackItem FeedbackData></FeedbackItem>
-					</div>
-				</div>
+				<FeedbackItem></FeedbackItem>
+				<FeedbackList feedback={feedback}></FeedbackList>
 			</div>
 		</>
 	)
 }
 
 export default App
+

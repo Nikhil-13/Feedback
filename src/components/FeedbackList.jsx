@@ -1,7 +1,8 @@
-import FeedbackData from '../data/FeedbackData'
-
-function FeedbackList() {
-	return <div>FeedbackList</div>
+function FeedbackList({ feedback }) {
+	if (!feedback || feedback.length === 0) {
+		console.log('no feedback')
+	}
+	return <></>
 }
 
 export default FeedbackList
