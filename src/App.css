@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid limegreen;
 }
 
 :root
@@ -30,6 +31,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  width: 60dvw;
 
 }
 
@@ -39,6 +41,7 @@
   color: #7C7C7C;
   width: 50dvw;
   border-radius: 10px;
+  margin: 1rem auto;
 }
 
 .card-body
@@ -48,7 +51,7 @@
 
 }
 
-.rating
+.rating-badge
 {
   position: absolute;
   top: -.5rem;
