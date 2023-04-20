@@ -1,6 +1,5 @@
-import { FaTimes } from 'react-icons/fa'
-function Card({ item }) {
-	console.log(item)
+import { FaTimes, FaEdit } from 'react-icons/fa'
+function Card({ item, handleDelete }) {
 	return (
 		<>
 			<div className='card'>
@@ -8,9 +7,14 @@ function Card({ item }) {
 					<div className='rating-badge' id='rating'>
 						{item.rating}
 					</div>
-					<button className='close'>
-						<FaTimes></FaTimes>
-					</button>
+					<div className='buttons'>
+						<button className='btn'>
+							<FaEdit></FaEdit>
+						</button>
+						<button onClick={handleDelete} className='btn'>
+							<FaTimes></FaTimes>
+						</button>
+					</div>
 					<p className='card-text'>{item.feedbackText}</p>
 				</div>
 			</div>

@@ -1,9 +1,10 @@
 import Card from './shared/Card'
-function FeedbackItem({ item }) {
+import PropTypes from 'prop-types'
+function FeedbackItem({ item, handleDelete }) {
 	return (
 		<>
 			<div className='feedback-item'>
-				<Card item={item}></Card>
+				<Card item={item} handleDelete={handleDelete(item.id)}></Card>
 			</div>
 		</>
 	)
