@@ -4,7 +4,7 @@ function FeedbackItem({ item, handleDelete }) {
 	return (
 		<>
 			<div className='feedback-item'>
-				<Card item={item} handleDelete={handleDelete(item.id)}></Card>
+				<Card item={item} handleDelete={handleDelete}></Card>
 			</div>
 		</>
 	)

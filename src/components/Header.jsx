@@ -1,7 +1,7 @@
 function Header() {
 	return (
 		<>
-			<div className='conatiner' id='header'>
+			<div id='header'>
 				<h1>Feedback</h1>
 			</div>
 		</>

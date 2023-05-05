@@ -7,11 +7,14 @@ import FeedbackStats from './components/FeedbackStats'
 
 function App() {
 	const [feedback, setFeedback] = useState(FeedbackData)
-	const handleDelete = () => {}
+	const handleDelete = () => {
+		console.log(123)
+	}
+
 	return (
 		<>
 			<Header></Header>
-			<div className='container col-6'>
+			<div className='container col-md-6 col-sm-10'>
 				<FeedbackStats feedback={feedback}></FeedbackStats>
 				<FeedbackList feedback={feedback} handleDelete={handleDelete}></FeedbackList>
 			</div>

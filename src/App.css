@@ -24,6 +24,11 @@
   color: var(--lavender-bush);
 }
 
+.col-6
+{
+  width: 60dvw;
+}
+
 .container
 {
   display: flex;
