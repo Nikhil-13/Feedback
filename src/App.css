@@ -24,10 +24,6 @@
   color: var(--lavender-bush);
 }
 
-.col-6
-{
-  width: 60dvw;
-}
 
 .container
 {
@@ -36,6 +32,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  transition: all .5s ease-in-out;
 }
 
 .feedback-item

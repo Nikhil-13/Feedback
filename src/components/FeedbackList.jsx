@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import FeedbackItem from './FeedbackItem'
 
 function FeedbackList({ feedback, handleDelete }) {
