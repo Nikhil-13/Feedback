@@ -11,7 +11,7 @@ function Card({ item, handleDelete }) {
 						<button className='btn'>
 							<FaEdit></FaEdit>
 						</button>
-						<button onClick={handleDelete} className='btn'>
+						<button onClick={() => handleDelete(item.id)} className='btn'>
 							<FaTimes></FaTimes>
 						</button>
 					</div>

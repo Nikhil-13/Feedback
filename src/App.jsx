@@ -8,8 +8,9 @@ import FeedbackStats from './components/FeedbackStats'
 function App() {
 	const [feedback, setFeedback] = useState(FeedbackData)
 	const handleDelete = (id) => {
-		console.log(123)
+		console.log(id)
 	}
+
 	return (
 		<>
 			<Header></Header>
