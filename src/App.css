@@ -10,7 +10,7 @@
 {
   --naples-yellow: #F9DC5C;
   --flame: #CF5C36;
-  --lavender-bush: #EEE5E9;
+  --light: #fff;
   --gray: #7C7C7C;
   --green: #80FF72;
 }
@@ -21,7 +21,7 @@
   text-align: center;
   text-transform: capitalize;
   padding: 1rem auto;
-  color: var(--lavender-bush);
+  color: var(--light);
 }
 
 
@@ -37,7 +37,7 @@
 
 .feedback-item
 {
-  background-color: var(--lavender-bush);
+  background-color: var(--light);
   color: #7C7C7C;
   width: 100%;
   border-radius: 10px;
@@ -91,4 +91,49 @@
   justify-content: space-between;
   width: 100%;
   font-weight: 550;
+}
+
+form
+{
+  background-color: var(--light);
+  color: var(--gray);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: .5rem auto;
+  height: 150px;
+  text-align: center;
+}
+
+input[type=text]
+{
+  background-color: var(--light);
+  color: #4e4e4e;
+  width: 80%;
+  padding: .25rem .5rem;
+  border-radius: 20px;
+  border: 0;
+  outline: 1pt solid var(--gray);
+}
+
+button[type=submit]
+{
+  background-color: var(--flame);
+  padding: .25rem .5rem;
+  outline: 0;
+  border: 0;
+  border-radius: 20px;
+}
+
+.review-content
+{
+  margin: 1rem 2rem;
+  padding: .5rem 2rem;
+  display: inline-flex;
+  width: 90%;
+  justify-content: space-around;
 }
