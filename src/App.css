@@ -103,9 +103,9 @@ form
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: .5rem auto;
-  height: 150px;
+  min-height: 150px;
   text-align: center;
 }
 
@@ -114,26 +114,88 @@ input[type=text]
   background-color: var(--light);
   color: #4e4e4e;
   width: 80%;
-  padding: .25rem .5rem;
+  padding: .7rem .5rem;
   border-radius: 20px;
   border: 0;
   outline: 1pt solid var(--gray);
 }
 
+input[type=text]:focus,
+input[type=text]:focus-visible
+{
+  border: 2px solid var(--flame);
+  outline: 0;
+  box-shadow: 0 0 10px var(--naples-yellow);
+}
+
+input[type=text]::placeholder
+{
+  font-size: smaller;
+  margin-left: .5rem;
+}
+
 button[type=submit]
 {
   background-color: var(--flame);
-  padding: .25rem .5rem;
+  padding: .25rem 1rem;
   outline: 0;
   border: 0;
   border-radius: 20px;
 }
 
+button[type=submit]:disabled
+{
+  background-color: var(--gray);
+  color: var(--light);
+}
+
 .review-content
 {
-  margin: 1rem 2rem;
+  margin: auto 2rem;
   padding: .5rem 2rem;
   display: inline-flex;
   width: 90%;
   justify-content: space-around;
+}
+
+.rating
+{
+  display: inline-block;
+}
+
+.rating input
+{
+  display: none;
+}
+
+.rating label
+{
+  color: var(--gray);
+  float: right;
+}
+
+.rating label:before
+{
+  content: "\2605";
+  font-size: 2.5rem;
+}
+
+.rating input:checked~label,
+.rating label:hover,
+.rating label:hover~label
+{
+  color: var(--flame);
+}
+
+
+form h2
+{
+  font-size: 2rem;
+}
+
+.message
+{
+  color: var(--flame);
+  font-size: smaller;
+  float: left;
 }

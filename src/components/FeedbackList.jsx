@@ -2,7 +2,7 @@ import FeedbackItem from './FeedbackItem'
 
 function FeedbackList({ feedback, handleDelete }) {
 	if (!feedback || feedback.length === 0) {
-		console.log('no feedback')
+		document.textContent = 'no feedback'
 	}
 
 	return (
