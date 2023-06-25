@@ -2,10 +2,12 @@ import { useState } from 'react'
 import RatingStar from './RatingStar'
 import PropTypes from 'prop-types'
 
-function FeedbackForm({ handleSubmit }) {
+function FeedbackForm() {
 	const [text, setText] = useState('')
 	const [btn, disableBtn] = useState(true)
-	const [message, setMessage] = useState('true')
+	const [message, setMessage] = useState('')
+	const [rating, setRating] = useState()
+
 	const passText = (e) => {
 		if (text === '') {
 			disableBtn(true)
@@ -18,11 +20,17 @@ function FeedbackForm({ handleSubmit }) {
 		}
 		setText(e.target.value)
 	}
+
+	const handleSubmit = function () {}
+
 	return (
 		<>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<h2>Your Feedback is much appreciated</h2>
-				<RatingStar></RatingStar>
+				<RatingStar
+					select={function (rating) {
+						setRating(rating)
+					}}></RatingStar>
 				<div className='review-content'>
 					<input
 						type='text'
@@ -46,4 +54,5 @@ export default FeedbackForm
 
 FeedbackForm.propTypes = {
 	text: PropTypes.string,
+	rating: PropTypes.number,
 }

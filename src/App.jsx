@@ -11,14 +11,11 @@ function App() {
 	const handleDelete = (id) => {
 		setFeedback(feedback.filter((elem) => elem.id != id))
 	}
-	const handleSubmit = () => {
-		console.log(123)
-	}
 	return (
 		<>
 			<Header></Header>
 			<div className='container col-12  col-sm-10 col-md-6 col-lg-7'>
-				<FeedbackForm handleSubmit={handleDelete}></FeedbackForm>
+				<FeedbackForm></FeedbackForm>
 				<FeedbackStats feedback={feedback}></FeedbackStats>
 				<FeedbackList feedback={feedback} handleDelete={handleDelete}></FeedbackList>
 			</div>

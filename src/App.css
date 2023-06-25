@@ -13,6 +13,13 @@
   --light: #fff;
   --gray: #7C7C7C;
   --green: #80FF72;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
 #header
@@ -190,7 +197,7 @@ button[type=submit]:disabled
 
 form h2
 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 1.5rem, 2rem);
 }
 
 .message
@@ -198,4 +205,9 @@ form h2
   color: var(--flame);
   font-size: smaller;
   float: left;
+}
+
+::-webkit-scrollbar
+{
+  display: none;
 }
