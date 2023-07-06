@@ -2,7 +2,7 @@ import { useState } from 'react'
 import RatingStar from './RatingStar'
 import PropTypes from 'prop-types'
 
-function FeedbackForm() {
+function FeedbackForm({ addFeedback }) {
 	const [text, setText] = useState('')
 	const [btn, disableBtn] = useState(true)
 	const [message, setMessage] = useState('')
@@ -21,7 +21,15 @@ function FeedbackForm() {
 		setText(e.target.value)
 	}
 
-	const handleSubmit = function () {}
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		const newFeedaback = {
+			feedbackText: text,
+			rating: rating,
+		}
+		addFeedback(newFeedaback)
+		setText('')
+	}
 
 	return (
 		<>

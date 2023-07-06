@@ -130,7 +130,7 @@ input[type=text]
 input[type=text]:focus,
 input[type=text]:focus-visible
 {
-  border: 2px solid var(--flame);
+  border: 1px solid var(--flame);
   outline: 0;
   box-shadow: 0 0 10px var(--naples-yellow);
 }
@@ -207,7 +207,23 @@ form h2
   float: left;
 }
 
+.link-btn
+{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+}
+
 ::-webkit-scrollbar
 {
   display: none;
+}
+
+@media(width<950px)
+{
+  .review-content
+  {
+    width: 100%;
+  }
 }
