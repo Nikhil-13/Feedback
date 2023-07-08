@@ -29,6 +29,7 @@ function FeedbackForm({ addFeedback }) {
 		}
 		addFeedback(newFeedaback)
 		setText('')
+		setRating()
 	}
 
 	return (

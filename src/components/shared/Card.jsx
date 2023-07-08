@@ -1,5 +1,5 @@
 import { FaTimes, FaEdit } from 'react-icons/fa'
-function Card({ item, handleDelete }) {
+function Card({ item, handleDelete, handleUpdate }) {
 	return (
 		<>
 			<div className='card'>
@@ -8,7 +8,7 @@ function Card({ item, handleDelete }) {
 						{item.rating}
 					</div>
 					<div className='buttons'>
-						<button className='btn'>
+						<button className='btn' onClick={() => handleUpdate(item.id)}>
 							<FaEdit></FaEdit>
 						</button>
 						<button onClick={() => handleDelete(item.id)} className='btn'>

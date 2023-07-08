@@ -215,6 +215,15 @@ form h2
   color: #fff;
 }
 
+a,
+a:active,
+a:visited
+{
+  text-decoration: none;
+  color: var(--light);
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar
 {
   display: none;

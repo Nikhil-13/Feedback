@@ -7,14 +7,25 @@ import FeedbackData from './data/FeedbackData'
 import FeedbackList from './components/FeedbackList'
 import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import AboutButton from './components/AboutButton'
+// import { useLocalStorage } from './hooks/useLocalStorage'
 
 function App() {
 	// console.count()
 	const [feedback, setFeedback] = useState(FeedbackData)
+	// const [localData, handleLocalData] = useLocalStorage(key, value)
+
 	const handleDelete = (id) => {
 		setFeedback(feedback.filter((elem) => elem.id != id))
+	}
+
+	const handleUpdate = (id) => {
+		feedback.forEach((elem) => {
+			if (elem.id === id) {
+				console.log(elem)
+			}
+		})
 	}
 
 	const addFeedback = (newFeedback) => {
@@ -24,7 +35,7 @@ function App() {
 	}
 
 	return (
-		<Router>
+		<>
 			<Header></Header>
 			<div className='container col-12  col-sm-10 col-md-6 col-lg-7'>
 				<Routes>
@@ -35,14 +46,19 @@ function App() {
 							<>
 								<FeedbackForm addFeedback={addFeedback} />
 								<FeedbackStats feedback={feedback} />
-								<FeedbackList feedback={feedback} handleDelete={handleDelete} />
+								<FeedbackList
+									feedback={feedback}
+									handleDelete={handleDelete}
+									handleUpdate={handleUpdate}
+								/>
 								<AboutButton />
 							</>
-						}></Route>
-					<Route path='/about' element={<About />}></Route>
+						}
+					/>
+					<Route path='/about' element={<About />} />
 				</Routes>
 			</div>
-		</Router>
+		</>
 	)
 }
 
