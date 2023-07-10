@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import RatingStar from './RatingStar'
 import PropTypes from 'prop-types'
+// import { FeedbackContext } from '../context/FeedbackContext'
 
 function FeedbackForm({ addFeedback }) {
 	const [text, setText] = useState('')

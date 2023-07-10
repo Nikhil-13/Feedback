@@ -9,23 +9,17 @@ import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import { Route, Routes } from 'react-router-dom'
 import AboutButton from './components/AboutButton'
-// import { useLocalStorage } from './hooks/useLocalStorage'
+import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
 	// console.count()
+
 	const [feedback, setFeedback] = useState(FeedbackData)
-	// const [localData, handleLocalData] = useLocalStorage(key, value)
+
+	useLocalStorage('data', JSON.stringify(feedback))
 
 	const handleDelete = (id) => {
 		setFeedback(feedback.filter((elem) => elem.id != id))
-	}
-
-	const handleUpdate = (id) => {
-		feedback.forEach((elem) => {
-			if (elem.id === id) {
-				console.log(elem)
-			}
-		})
 	}
 
 	const addFeedback = (newFeedback) => {
@@ -34,10 +28,21 @@ function App() {
 		console.log(newFeedback)
 	}
 
+	const handleUpdate = (id) => {
+		feedback.forEach((elem) => {
+			if (elem.id === id) {
+				feedback.forEach((feed) => {
+					if (elem.id === feed.id) {
+						setText(feed.feedbackText)
+					}
+				})
+			}
+		})
+	}
 	return (
 		<>
 			<Header></Header>
-			<div className='container col-12  col-sm-10 col-md-6 col-lg-7'>
+			<div className='container col-12  col-sm-10 col-md-7 col-lg-7'>
 				<Routes>
 					<Route
 						exact

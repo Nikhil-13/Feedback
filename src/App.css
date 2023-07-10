@@ -120,7 +120,8 @@ input[type=text]
 {
   background-color: var(--light);
   color: #4e4e4e;
-  width: 80%;
+  max-width: 80%;
+  min-width: 70%;
   padding: .7rem .5rem;
   border-radius: 20px;
   border: 0;
@@ -229,10 +230,23 @@ a:visited
   display: none;
 }
 
-@media(width<950px)
+@media(width<=425px)
 {
   .review-content
   {
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
     width: 100%;
+  }
+
+  input[type=text]
+  {
+    width: 100%;
+  }
+
+  button[type=submit]
+  {
+    padding: .5rem 1rem;
   }
 }
