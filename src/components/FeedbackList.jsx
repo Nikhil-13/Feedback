@@ -1,6 +1,10 @@
+import { useContext } from 'react'
 import FeedbackItem from './FeedbackItem'
+import FeedbackContext from '../context/FeedbackContext'
 
-function FeedbackList({ feedback, handleDelete, handleUpdate }) {
+function FeedbackList({ handleDelete, handleUpdate }) {
+	const { feedback } = useContext(FeedbackContext)
+
 	if (!feedback || feedback.length === 0) {
 		document.textContent = 'no feedback'
 	}

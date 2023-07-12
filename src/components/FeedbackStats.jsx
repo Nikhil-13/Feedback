@@ -1,4 +1,8 @@
-function FeedbackStats({ feedback }) {
+import { useContext } from 'react'
+import FeedbackContext from '../context/FeedbackContext'
+
+function FeedbackStats() {
+	const { feedback } = useContext(FeedbackContext)
 	let sum = 0
 	feedback.forEach((element) => {
 		sum += element.rating

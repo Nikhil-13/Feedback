@@ -1,4 +1,6 @@
 import Card from './shared/Card'
+import { useContext } from 'react'
+import FeedbackContext from '../context/FeedbackContext'
 function FeedbackItem({ item, handleDelete, handleUpdate }) {
 	return (
 		<>

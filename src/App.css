@@ -232,6 +232,11 @@ a:visited
 
 @media(width<=425px)
 {
+  .container
+  {
+    width: 100%;
+  }
+
   .review-content
   {
     flex-direction: column;
@@ -248,5 +253,21 @@ a:visited
   button[type=submit]
   {
     padding: .5rem 1rem;
+  }
+}
+
+@media(425px>width<769px)
+{
+  .container
+  {
+    width: 30dvw;
+  }
+}
+
+@media(width>=1024px)
+{
+  .container
+  {
+    width: 50dvw;
   }
 }
