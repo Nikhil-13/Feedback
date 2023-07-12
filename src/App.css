@@ -22,6 +22,7 @@
   background-color: #242424;
 }
 
+
 #header
 {
   background-color: var(--flame);
@@ -39,6 +40,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  margin-inline: auto;
   transition: all .5s ease-in-out;
 }
 
@@ -56,6 +58,13 @@
   position: relative;
   padding: 1rem 2rem;
 
+}
+
+.card-text
+{
+  color: #000;
+  font-weight: 500;
+  opacity: .8;
 }
 
 .rating-badge

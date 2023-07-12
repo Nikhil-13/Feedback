@@ -1,21 +1,21 @@
 import './App.css'
 import { v4 as uuidv4 } from 'uuid'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import Header from './components/Header'
 import About from './pages/About'
 import FeedbackList from './components/FeedbackList'
 import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import AboutButton from './components/AboutButton'
-// import FeedbackData from './data/FeedbackData'
 import { Route, Routes } from 'react-router-dom'
 import FeedbackContext from './context/FeedbackContext'
-import useLocalStorage from './hooks/useLocalStorage'
+// import FeedbackData from './data/FeedbackData'
+// import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
-	// console.count()
 	const { feedback, setFeedback } = useContext(FeedbackContext)
 
+	// console.count()
 	// const [feedback, setFeedback] = useState(FeedbackData)
 	// // useLocalStorage('name', JSON.stringify(feedback))
 	const handleDelete = (id) => {

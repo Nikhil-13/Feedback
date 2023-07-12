@@ -5,7 +5,7 @@ function AboutButton() {
 	return (
 		<>
 			<div className='link-btn'>
-				<Link to='/about'>
+				<Link to='/about' aria-label='About'>
 					<FaQuestion size={25} />
 				</Link>
 			</div>

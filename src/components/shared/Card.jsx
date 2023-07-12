@@ -8,10 +8,16 @@ function Card({ item, handleDelete, handleUpdate }) {
 						{item.rating}
 					</div>
 					<div className='buttons'>
-						<button className='btn' onClick={() => handleUpdate(item.id)}>
+						<button
+							className='btn'
+							aria-label='edit'
+							onClick={() => handleUpdate(item.id)}>
 							<FaEdit></FaEdit>
 						</button>
-						<button onClick={() => handleDelete(item.id)} className='btn'>
+						<button
+							className='btn'
+							aria-label='delete'
+							onClick={() => handleDelete(item.id)}>
 							<FaTimes></FaTimes>
 						</button>
 					</div>
