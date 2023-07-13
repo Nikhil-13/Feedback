@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import FeedbackItem from './FeedbackItem'
 import FeedbackContext from '../context/FeedbackContext'
 
-function FeedbackList({ handleDelete, handleUpdate }) {
+function FeedbackList() {
 	const { feedback } = useContext(FeedbackContext)
 
 	if (!feedback || feedback.length === 0) {
@@ -12,11 +12,7 @@ function FeedbackList({ handleDelete, handleUpdate }) {
 	return (
 		<>
 			{feedback.map((item) => (
-				<FeedbackItem
-					key={item.id}
-					item={item}
-					handleDelete={handleDelete}
-					handleUpdate={handleUpdate}></FeedbackItem>
+				<FeedbackItem key={item.id} item={item}></FeedbackItem>
 			))}
 		</>
 	)

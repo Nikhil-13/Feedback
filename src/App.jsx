@@ -1,6 +1,4 @@
 import './App.css'
-import { v4 as uuidv4 } from 'uuid'
-import { useContext } from 'react'
 import Header from './components/Header'
 import About from './pages/About'
 import FeedbackList from './components/FeedbackList'
@@ -8,36 +6,18 @@ import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import AboutButton from './components/AboutButton'
 import { Route, Routes } from 'react-router-dom'
-import FeedbackContext from './context/FeedbackContext'
+// import { useContext } from 'react'
+// import FeedbackContext from './context/FeedbackContext'
 // import FeedbackData from './data/FeedbackData'
 // import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
-	const { feedback, setFeedback } = useContext(FeedbackContext)
+	// const { feedback, setFeedback } = useContext(FeedbackContext)
 
 	// console.count()
 	// const [feedback, setFeedback] = useState(FeedbackData)
 	// // useLocalStorage('name', JSON.stringify(feedback))
-	const handleDelete = (id) => {
-		setFeedback(feedback.filter((elem) => elem.id != id))
-	}
 
-	const addFeedback = (newFeedback) => {
-		newFeedback.id = uuidv4()
-		setFeedback([newFeedback, ...feedback])
-		console.log(newFeedback)
-	}
-	const handleUpdate = (id) => {
-		feedback.forEach((elem) => {
-			if (elem.id === id) {
-				feedback.forEach((feed) => {
-					if (elem.id === feed.id) {
-						console.log(feed.feedbackText)
-					}
-				})
-			}
-		})
-	}
 	return (
 		<>
 			<Header></Header>
@@ -48,9 +28,9 @@ function App() {
 						path='/'
 						element={
 							<>
-								<FeedbackForm addFeedback={addFeedback} />
+								<FeedbackForm />
 								<FeedbackStats />
-								<FeedbackList handleDelete={handleDelete} handleUpdate={handleUpdate} />
+								<FeedbackList />
 								<AboutButton />
 							</>
 						}

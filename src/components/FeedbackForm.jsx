@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import RatingStar from './RatingStar'
 import PropTypes from 'prop-types'
-// import { FeedbackContext } from '../context/FeedbackContext'
+import FeedbackContext from '../context/FeedbackContext'
 
-function FeedbackForm({ addFeedback }) {
+function FeedbackForm() {
 	const [text, setText] = useState('')
 	const [btn, disableBtn] = useState(true)
 	const [message, setMessage] = useState('')
 	const [rating, setRating] = useState()
+
+	const { addFeedback } = useContext(FeedbackContext)
 
 	const passText = (e) => {
 		if (text === '') {
@@ -21,7 +23,6 @@ function FeedbackForm({ addFeedback }) {
 		}
 		setText(e.target.value)
 	}
-
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const newFeedaback = {
@@ -30,6 +31,7 @@ function FeedbackForm({ addFeedback }) {
 		}
 		addFeedback(newFeedaback)
 		setText('')
+		disableBtn(true)
 		setRating()
 	}
 
