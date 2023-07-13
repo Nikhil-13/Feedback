@@ -33,6 +33,7 @@ function FeedbackForm() {
 		}
 		setText(e.target.value)
 	}
+
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const newFeedaback = {
@@ -42,8 +43,9 @@ function FeedbackForm() {
 
 		if (feedbackEdit.edit === true) {
 			updateFeedback(feedbackEdit.item.id, newFeedaback)
+		} else {
+			addFeedback(newFeedaback)
 		}
-		addFeedback(newFeedaback)
 		setText('')
 		disableBtn(true)
 		setRating()

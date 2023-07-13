@@ -32,11 +32,12 @@ export const FeedbackProvider = ({ children }) => {
 			edit: true,
 		})
 	}
-	const updateFeedback = (id, updFeed) => {
+
+	const updateFeedback = (id, updatedFeedItem) => {
 		const updatedFeedaback = {
 			id: id,
-			rating: updFeed.rating,
-			feedbackText: updFeed.feedbackText,
+			rating: updatedFeedItem.rating,
+			feedbackText: updatedFeedItem.feedbackText,
 		}
 		setFeedback(
 			feedback.map((item) =>
