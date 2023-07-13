@@ -13,7 +13,6 @@ import { Route, Routes } from 'react-router-dom'
 
 function App() {
 	// const { feedback, setFeedback } = useContext(FeedbackContext)
-
 	// console.count()
 	// const [feedback, setFeedback] = useState(FeedbackData)
 	// // useLocalStorage('name', JSON.stringify(feedback))

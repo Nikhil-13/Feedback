@@ -1,8 +1,17 @@
-function savedData(key) {
-	const presentData = JSON.parse(localStorage.getItem(key, ''))
+import { useState } from 'react'
+
+function useLocalStorage(key, initialValue) {
+	const [storageValue, setStoreageValue] = useState(() =>
+		getLocalStorageValue(key, initialValue)
+	)
+
+	const setValue = (value) => {}
+	return [storageValue, setValue]
 }
 
-export default function useLocalStorage(key, value) {
-	localStorage.setItem(key, value)
-	savedData(key)
+function getLocalStorageValue(key, initialValue) {
+	const localStorageItem = localStorage.getItem(key)
+	return localStorageItem ? JSON.parse(localStorageItem) : initialValue
 }
+
+export default useLocalStorage

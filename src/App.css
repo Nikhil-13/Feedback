@@ -133,14 +133,15 @@ input[type=text]
   min-width: 70%;
   padding: .7rem .5rem;
   border-radius: 20px;
-  border: 0;
-  outline: 1pt solid var(--gray);
+  /* border: 0; */
+  border: 1pt solid var(--gray);
 }
 
 input[type=text]:focus,
 input[type=text]:focus-visible
 {
-  border: 1px solid var(--flame);
+  /* border: 1pt solid var(--flame); */
+  border: 1pt solid var(--flame);
   outline: 0;
   box-shadow: 0 0 10px var(--naples-yellow);
 }

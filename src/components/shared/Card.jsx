@@ -1,5 +1,8 @@
+import { useContext } from 'react'
 import { FaTimes, FaEdit } from 'react-icons/fa'
-function Card({ item, handleDelete, handleUpdate }) {
+import FeedbackContext from '../../context/FeedbackContext'
+function Card({ item }) {
+	const { handleDelete, editFeedback } = useContext(FeedbackContext)
 	return (
 		<>
 			<div className='card'>
@@ -8,10 +11,7 @@ function Card({ item, handleDelete, handleUpdate }) {
 						{item.rating}
 					</div>
 					<div className='buttons'>
-						<button
-							className='btn'
-							aria-label='edit'
-							onClick={() => handleUpdate(item.id)}>
+						<button className='btn' aria-label='edit' onClick={() => editFeedback(item)}>
 							<FaEdit></FaEdit>
 						</button>
 						<button
