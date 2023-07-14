@@ -22,10 +22,11 @@ function FeedbackForm() {
 	const passText = (e) => {
 		if (text === '') {
 			disableBtn(true)
-		} else if (text.length < 9) {
+		} else if (text.trim().length < 9) {
 			setMessage('Must exceed 10 characters')
 			disableBtn(true)
 		} else if (rating === undefined || rating === null) {
+			setMessage('Please Select a rating')
 			disableBtn(true)
 		} else {
 			setMessage(null)

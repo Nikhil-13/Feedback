@@ -14,6 +14,7 @@
   --gray: #7C7C7C;
   --green: #80FF72;
 
+  --warning: #b10c17;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -213,9 +214,14 @@ form h2
 
 .message
 {
-  color: var(--flame);
+  color: var(--light);
   font-size: smaller;
   float: left;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--warning);
+
+  position: relative;
 }
 
 .link-btn
@@ -235,12 +241,13 @@ a:visited
   cursor: pointer;
 }
 
+
 ::-webkit-scrollbar
 {
   display: none;
 }
 
-@media(width<=425px)
+@media(width<=426px)
 {
   .container
   {
