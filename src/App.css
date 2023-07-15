@@ -247,7 +247,7 @@ a:visited
   display: none;
 }
 
-@media(width<426px)
+@media(width<=426px)
 {
   .container
   {
