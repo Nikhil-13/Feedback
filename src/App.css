@@ -247,11 +247,11 @@ a:visited
   display: none;
 }
 
-@media(width<=426px)
+@media(max-width:426px)
 {
   .container
   {
-    width: 100%;
+    width: 100dvw;
   }
 
   .review-content
@@ -260,6 +260,7 @@ a:visited
     align-items: center;
     gap: .5rem;
     width: 100%;
+    padding: 1rem;
   }
 
   input[type=text]
@@ -273,7 +274,7 @@ a:visited
   }
 }
 
-@media(426px<width<=768px)
+@media(min-width:768px) and (max-width:1024px)
 {
   .container
   {
@@ -281,7 +282,7 @@ a:visited
   }
 }
 
-@media(width>768px)
+@media(min-width:1024px) and (max-width:1440px)
 {
   .container
   {
