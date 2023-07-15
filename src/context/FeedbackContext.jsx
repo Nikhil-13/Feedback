@@ -1,13 +1,12 @@
 import { createContext, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import FeedbackData from '../data/FeedbackData'
-// import { useLocalStorage } from '../hooks/useLocalStorage'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 
 const FeedbackContext = createContext()
 
 export const FeedbackProvider = ({ children }) => {
-	const [feedback, setFeedback] = useState(FeedbackData)
-	// const [feedback, setFeedback] = useLocalStorage('tasks', FeedbackData)
+	// const [feedback, setFeedback] = useState(FeedbackData)
+	const [feedback, setFeedback] = useLocalStorage('tasks')
 	const [feedbackEdit, setFeedbackEdit] = useState({
 		item: {},
 		edit: false,
