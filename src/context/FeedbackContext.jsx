@@ -21,7 +21,8 @@ export const FeedbackProvider = ({ children }) => {
 			newFeedback.id = uuidv4()
 			setFeedback([newFeedback, ...feedback])
 		} else {
-			setFeedback([newFeedback, ...feedback])
+			const { first } = newFeedback
+			setFeedback([first, ...feedback])
 		}
 	}
 
